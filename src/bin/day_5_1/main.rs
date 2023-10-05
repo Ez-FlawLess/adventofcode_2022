@@ -54,10 +54,21 @@ fn main() {
             to: m[2] - 1,
         };
             
+        // Part 1
+        // for _ in 0..m.count {
+            
+            // let c = cargo[m.from].pop().unwrap();
+            // cargo[m.to].push(c);
+        // }
+        // Part 2
+        let mut holder = Vec::with_capacity(m.count);
         for _ in 0..m.count {
-            let c = cargo[m.from].pop().unwrap();
-            cargo[m.to].push(c);
+            holder.push(cargo[m.from].pop().unwrap());
         }
+        for _ in 0..m.count {
+            cargo[m.to].push(holder.pop().unwrap());
+        }
+
     }
 
     let result = cargo.iter()
