@@ -13,9 +13,18 @@ fn main() {
             ((pair_1[0], pair_1[1]), (pair_2[0], pair_2[1]))
         })
         .filter(|(pair_1, pair_2)| {
-            if pair_1.0 <= pair_2.0 && pair_1.1 >= pair_2.1 {
+            // Part 1
+            // if pair_1.0 <= pair_2.0 && pair_1.1 >= pair_2.1 {
+            //     true
+            // } else if pair_2.0 <= pair_1.0 && pair_2.1 >= pair_1.1 {
+            //     true
+            // } else {
+            //     false
+            // }
+            // Part 2
+            if pair_1.0 >= pair_2.0 && pair_1.0 <= pair_2.1 {
                 true
-            } else if pair_2.0 <= pair_1.0 && pair_2.1 >= pair_1.1 {
+            } else if pair_2.0 >= pair_1.0 && pair_2.0 <= pair_1.1 {
                 true
             } else {
                 false
